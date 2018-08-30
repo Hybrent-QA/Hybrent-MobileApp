@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="142502" started-at="2018-08-30T11:52:02Z" finished-at="2018-08-30T11:54:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="142502" started-at="2018-08-30T11:52:02Z" finished-at="2018-08-30T11:54:24Z">
+      <class name="testCases.TC_Cart">
+        <test-method status="PASS" signature="setBrowser()[pri:0, instance:testCases.TC_Cart@7f3b84b8]" name="setBrowser" is-config="true" duration-ms="28309" started-at="2018-08-30T17:21:34Z" finished-at="2018-08-30T17:22:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method status="PASS" signature="startReport1()[pri:0, instance:testCases.TC_Cart@7f3b84b8]" name="startReport1" is-config="true" duration-ms="1923" started-at="2018-08-30T17:22:02Z" finished-at="2018-08-30T17:22:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport1 -->
+        <test-method status="PASS" signature="Tc_Cart_001()[pri:0, instance:testCases.TC_Cart@7f3b84b8]" name="Tc_Cart_001" duration-ms="133913" started-at="2018-08-30T17:22:04Z" finished-at="2018-08-30T17:24:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Cart_001 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.TC_Cart@7f3b84b8]" name="endReport" is-config="true" duration-ms="6616" started-at="2018-08-30T17:24:18Z" finished-at="2018-08-30T17:24:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testCases.TC_Cart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

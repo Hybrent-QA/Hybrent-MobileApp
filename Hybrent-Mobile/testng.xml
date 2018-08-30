@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="example suite 1" verbose="1" >
+ <parameter name="platform" value="Android" />
+ parameter name="siteName" value="Mobile" />
+ <test name="CartPage" preserve-order="true">
+  <classes>
+   <class name="testCases.Testcases">
+   <methods>
+     <include name="Tc_Login_01" />
+    </methods>
+	</class>
+  </classes>
+   </test>
+   </suite>
+
