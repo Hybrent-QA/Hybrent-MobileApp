@@ -7,7 +7,7 @@
         <methods>
           <include name="startReport1"/>
           <include name="endReport"/>
-          <include name="Tc_Cart_001"/>
+          <include name="Tc_Cart_002"/>
           <include name="setBrowser"/>
         </methods>
       </class> <!-- testCases.TC_Cart -->

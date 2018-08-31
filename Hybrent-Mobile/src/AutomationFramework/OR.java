@@ -25,6 +25,9 @@ public class OR {
 	public static String createPO ="createPO#xpath=//*[@ng-click=\"createPO()\"]";
 	public static String Search ="Search#xpath=//*[@placeholder='search']";
 	public static String Scan ="Scan#xpath=//*[@ng-click='startScan()']";
+	public static String Btn_NO ="NO#xpath=//button[text()='No']";
+	public static String Btn_Yes ="Yes#xpath=//button[text()='Yes']";
+	
 	
 	// Shop
 	
@@ -120,6 +123,14 @@ public class OR {
 	public static String Cart_label_ReceiveonlySelectVendors ="Receiveonly#xpath=//p[text()='Receive Only']";
 	public static String Cart_label_Usermypo ="UseMyPo#xpath=//p[text()='Use My PO #']";
 	public static String Cart_label_specialinstuction ="SpecialInstruction#xpath=//p[text()='Special Instruction']";
+	public static String Cart_Usermypo_toogle ="UseMyPo_toogle#xpath=//*[text()='Use My PO #']/following-sibling::label";
+	public static String Cart_ReceiveOnly_toogle ="ReceiveOnly_toogle#xpath=//*[text()='Receive Only']/following-sibling::label";
+	public static String Cart_SpecialInstruction_toogle ="SpecialInstruction_toogle#xpath=//*[text()='Special Instruction']/following-sibling::label";
+	public static String Cart_Input_PO ="InputPo#xpath=//*[@placeholder='PO #']";
+	public static String Cart_Input_SI ="InputPo#xpath=//*[@placeholder='Special Instruction']";
+	public static String Cart_TitleSI ="TitleSI#xpath=//h1[text()='Special Instructions']";
+	public static String Cart_Fist_SI ="Fist_SI#xpath=(//*[@class='item-content ng-binding'])[1]";
+	public static String Cart_Fist_SI_Input ="InputSI#xpath=(//*[@id='specialInstructionSearchQuery'])[1]";
 	
 	public static String Cart_SelectVendors ="SelectVendors#xpath=//select[@id='vendor']";
 	public static String Cart_Pricevendorname ="Pricevendorname#xpath=//li[@class='item item-divider']/b";
