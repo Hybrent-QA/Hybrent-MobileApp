@@ -2585,125 +2585,27 @@ public class Generickeywords extends Common
         jsExec = (JavascriptExecutor) driver;
     }
  
-    //Wait for JQuery Load
     public static void waitForJQueryLoad() {
-    	 JavascriptExecutor jsExec = (JavascriptExecutor) driver;
-    	 
-         Boolean angularUnDefined = (Boolean) executor.executeScript("return window.angular === undefined");
-         if (!angularUnDefined) {
-             Boolean angularInjectorUnDefined = (Boolean) jsExec.executeScript("return angular.element(document).injector() === undefined");
-             if(!angularInjectorUnDefined) {
-                 sleep(20);
-                 waitForAngularLoad();
-                 waitUntilJSReady();
-                 sleep(20);
-             } else {
-                 System.out.println("Angular injector is not defined on this site!");
-             }
-         }  else {
-             System.out.println("Angular is not defined on this site!");
-         }
+    	sleep(20);
     }
  
  
-    //Wait for Angular Load
     public static void waitForAngularLoad() {
-        WebDriverWait wait = new WebDriverWait(driver,35);
-        JavascriptExecutor jsExec = (JavascriptExecutor) driver;
- 
-        String angularReadyScript = "return angular.element(document).injector().get('$http').pendingRequests.length === 0";
- 
-        //Wait for ANGULAR to load
-        ExpectedCondition<Boolean> angularLoad = driver -> Boolean.valueOf(((JavascriptExecutor) driver)
-                .executeScript(angularReadyScript).toString());
- 
-        //Get Angular is Ready
-        boolean angularReady = Boolean.valueOf(jsExec.executeScript(angularReadyScript).toString());
- 
-        //Wait ANGULAR until it is Ready!
-        if(!angularReady) {
-            System.out.println("ANGULAR is NOT Ready!");
-            //Wait for Angular to load
-            wait.until(angularLoad);
-        } else {
-            System.out.println("ANGULAR is Ready!");
-        }
+        sleep(20);
     }
  
-    //Wait Until JS Ready
     public static void waitUntilJSReady() {
-        WebDriverWait wait = new WebDriverWait(driver,15);
-        JavascriptExecutor jsExec = (JavascriptExecutor) driver;
- 
-        //Wait for Javascript to load
-        ExpectedCondition<Boolean> jsLoad = driver -> ((JavascriptExecutor) driver)
-                .executeScript("return document.readyState").toString().equals("complete");
- 
-        //Get JS is Ready
-        boolean jsReady =  (Boolean) jsExec.executeScript("return document.readyState").toString().equals("complete");
- 
-        //Wait Javascript until it is Ready!
-        if(!jsReady) {
-            System.out.println("JS in NOT Ready!");
-            //Wait for Javascript to load
-            wait.until(jsLoad);
-        } else {
-            System.out.println("JS is Ready!");
-        }
+        sleep(20);
     }
  
-    //Wait Until JQuery and JS Ready
     public static void waitUntilJQueryReady() {
-        JavascriptExecutor jsExec = (JavascriptExecutor) driver;
- 
-        //First check that JQuery is defined on the page. If it is, then wait AJAX
-        Boolean jQueryDefined = (Boolean) jsExec.executeScript("return typeof jQuery != 'undefined'");
-        if (jQueryDefined == true) {
-            //Pre Wait for stability (Optional)
-            sleep(20);
- 
-            //Wait JQuery Load
-            waitForJQueryLoad();
- 
-            //Wait JS Load
-            waitUntilJSReady();
- 
-            //Post Wait for stability (Optional)
-            sleep(20);
-        }  else {
-            System.out.println("jQuery is not defined on this site!");
-        }
+       sleep(20);
     }
  
-    //Wait Until Angular and JS Ready
     public static void waitUntilAngularReady() {
-        JavascriptExecutor jsExec = (JavascriptExecutor) driver;
- 
-        //First check that ANGULAR is defined on the page. If it is, then wait ANGULAR
-        Boolean angularUnDefined = (Boolean) jsExec.executeScript("return window.angular === undefined");
-        if (!angularUnDefined) {
-            Boolean angularInjectorUnDefined = (Boolean) jsExec.executeScript("return angular.element(document).injector() === undefined");
-            if(!angularInjectorUnDefined) {
-                //Pre Wait for stability (Optional)
-                sleep(20);
- 
-                //Wait Angular Load
-                waitForAngularLoad();
- 
-                //Wait JS Load
-                waitUntilJSReady();
- 
-                //Post Wait for stability (Optional)
-                sleep(20);
-            } else {
-                System.out.println("Angular injector is not defined on this site!");
-            }
-        }  else {
-            System.out.println("Angular is not defined on this site!");
-        }
+        sleep(20);
     }
  
-    //Wait Until JQuery Angular and JS is ready
     public static void waitforPaageload() {
         waitUntilAngularReady();
     }
